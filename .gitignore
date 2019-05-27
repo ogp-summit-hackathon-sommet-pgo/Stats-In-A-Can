@@ -109,7 +109,7 @@ venv.bak/
 .mypy_cache/
 
 
-/node_modules
+node_modules/
 
 # spark things
 /spark-warehouse
