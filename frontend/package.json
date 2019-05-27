@@ -27,6 +27,8 @@
     "babel-polyfill": "^6.26.0",
     "bootstrap": ">=4.1.2",
     "chart.js": "^2.7.3",
+    "d3": "^5.9.2",
+    "d3-geo": "^1.11.3",
     "es6-promise": "^4.2.5",
     "express": "^4.16.2",
     "history": "^4.7.2",
@@ -44,12 +46,14 @@
     "react-redux": "^4.4.5",
     "react-router-dom": "^4.2.2",
     "react-scroll-to": "^2.0.1",
+    "react-simple-maps": "^0.12.1",
     "react-transition-group": "^2.5.0",
     "reactstrap": "^6.5.0",
     "recharts": "^1.4.1",
     "redux": "^3.6.0",
     "redux-thunk": "^2.1.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "topojson-client": "^3.0.0"
   },
   "devDependencies": {
     "async-reactor": "^1.2.2",

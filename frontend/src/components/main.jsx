@@ -15,6 +15,7 @@ import {
 import randomColor from 'randomcolor'
 // import {top20, comparison_games_viewers_1518, viewersCount2018} from '../data/data.js'
 import {Table} from 'reactstrap'
+import GeoMap from './geo-map.jsx'
 
 const Main = () => {
     const name = 'Stats In A Can'
@@ -36,10 +37,7 @@ const Main = () => {
                         <span className={styles.pageDescription}>
                             <br/>
                         </span>
-                        <div className={styles.notes}>
-                            Hello World
-                            <br/>
-                        </div>
+
                         <div className={styles.tableAndBar}>
                             <div className={styles.barLeft}>
 
@@ -47,7 +45,7 @@ const Main = () => {
                         </div>
 
                         <div>
-
+                            <GeoMap/>
                         </div>
                     </div>
                 </div>

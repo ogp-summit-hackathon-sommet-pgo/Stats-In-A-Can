@@ -156,10 +156,11 @@ hr {
 
 .sidenavTitle {
     padding-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #73a0a6;
     font-weight: bolder;
-    text-shadow: 2px 2px #be8fa2;
+    text-shadow: 1.5px 1.5px #be8fa2;
+    font-family: 'Lobster', cursive;
 }
 
 .tableAndBar {
@@ -251,8 +252,8 @@ hr {
 }
 
 .canLayout {
-    width: 50rem;
-    height: 72rem;
+    width: 30rem;
+    height: 45rem;
     /*background: red;*/
     background: linear-gradient(0deg, #FFC0CB 90%, transparent 10%);
     /*border-top-left-radius: 10px;*/
@@ -260,28 +261,29 @@ hr {
 }
 
 .canTop {
-    width: 50rem;
+    width: 30rem;
     height: 10rem;
     background: silver;
     border-radius: 50%;
-    margin-top: -70rem;
+    margin-top: -46rem;
     /*transform: translate(-50rem, 2rem);*/
 }
 
 .canButt {
-    width: 50rem;
+    width: 30rem;
     height: 10rem;
     background: #FFC0CB;
     border-radius: 50%;
     /*transform: translate(-100rem, 67rem);*/
     border-bottom: 10px solid silver;
-    margin-top: 55rem;
+    margin-top: 31rem;
 }
 
 .canTitle {
     /*transform: translate(-140rem,20rem);*/
     font-size: 5rem;
     font-weight: bold;
+    font-family: 'Lobster', cursive;
 }
 
 .canRating {
@@ -292,8 +294,8 @@ hr {
 
 .canCommentary {
     max-width: 80%;
-    margin: 10rem;
-    font-size: 2rem;
+    margin: 2rem 10rem;
+    font-size: 1.5rem;
 }
 
 .canBody {
@@ -303,7 +305,7 @@ hr {
 }
 
 .canText {
-    margin-top: -55rem;
+    margin-top: -37rem;
     margin-left: 5rem;
     margin-bottom: 30rem;
 }
@@ -321,4 +323,18 @@ hr {
 .canContent {
     font-size: 2rem;
     font-weight: normal;
+}
+
+.chartAndText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.canBodyBack {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    align-self: flex-end;
 }
