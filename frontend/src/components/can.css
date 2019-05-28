@@ -1,0 +1,15 @@
+.labelHeader {
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 132%;
+    font-size: 3rem;
+    font-family: 'Bowlby One SC', cursive;
+}
+
+.labelRating {
+    font-family: 'Bowlby One SC', cursive;
+    font-weight: bolder;
+    font-size: 4rem;
+}

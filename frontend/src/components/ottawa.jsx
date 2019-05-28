@@ -16,6 +16,7 @@ import {
     Bar, BarChart,
 } from 'recharts'
 import WorldMap from './world-map.jsx'
+import canStyles from './can.css'
 
 const Channel = () => {
     const name = 'Stats In A Can'
@@ -264,19 +265,45 @@ const Channel = () => {
                         <div className={styles.canLayout}></div>
                         <div className={styles.canTop}></div>
                         <div className={styles.canButt}></div>
-                        <div className={styles.canLable}>
+                        <div className={styles.canLabel}>
                             <div className={styles.tableRight}>
                                 <Table borderless responsive className={styles.gameName}>
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Game</th>
-                                        <th>Stream Count</th>
-                                        <th>Genre</th>
-                                    </tr>
+                                    {/*<thead>*/}
+                                    {/*<tr>*/}
+                                    {/*    <th>#</th>*/}
+                                    {/*    <th>Game</th>*/}
+                                    {/*    <th>Stream Count</th>*/}
+                                    {/*    <th>Genre</th>*/}
+                                    {/*</tr>*/}
+                                    {/*</thead>*/}
+                                    {/*<tbody>*/}
+                                    {/*/!*{tr}*!/*/}
+                                    {/*</tbody>*/}
+                                    <thead className={canStyles.labelHeader}>
+                                    <span>C</span>
+                                    <span>i</span>
+                                    <span>t</span>
+                                    <span>y</span>
+                                    <span> </span>
+                                    <span>F</span>
+                                    <span>a</span>
+                                    <span>c</span>
+                                    <span>t</span>
+                                    <span>s</span>
                                     </thead>
                                     <tbody>
-                                    {/*{tr}*/}
+                                    <tr>
+                                        <th>Safety Rating</th>
+                                        <td className={canStyles.labelRating}>95</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Environment Rating</th>
+                                        <td className={canStyles.labelRating}>95</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Economy Rating</th>
+                                        <td className={canStyles.labelRating}>95</td>
+                                    </tr>
                                     </tbody>
                                 </Table>
                             </div>
