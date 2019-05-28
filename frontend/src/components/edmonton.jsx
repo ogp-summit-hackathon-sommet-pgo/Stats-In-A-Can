@@ -290,7 +290,11 @@ const Channel = () => {
                                     <tbody>
                                     <tr className={canStyles.labelTr}>
                                         <th className={canStyles.labelTh}>Population</th>
-                                        <td className={canStyles.labelPopulation}>950,000</td>
+                                        <td className={canStyles.labelPopulation}>932,546</td>
+                                    </tr>
+                                    <tr className={canStyles.labelTr}>
+                                        <th className={canStyles.labelTh}>Area (in km<sup>2</sup>)</th>
+                                        <td className={canStyles.labelPopulation}>684.19</td>
                                     </tr>
                                     <tr className={canStyles.labelTr}>
                                         <th className={canStyles.labelTh}>Safety</th>

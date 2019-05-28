@@ -18,7 +18,7 @@ const MainMenu = () => {
             </Link>
             <hr className={styles.divider}/>
             <Link to="/">Home</Link>
-            <Link to="/can">Template</Link>
+            {/*<Link to="/can">Template</Link>*/}
             <Link to="/overall">Overall Analysis</Link>
             <p className={styles.sidenavText}>Analysis By Cities</p>
             <ul className={styles.sidenavUl}>
@@ -26,8 +26,10 @@ const MainMenu = () => {
                 <li><Link to="/edmonton">Edmonton</Link></li>
                 <li><Link to="/calgary">Calgary</Link></li>
             </ul>
+            <a href='https://www.devxia.com/mapbox.html' target='_blank'>Ottawa Stop Map</a>
             <Link to="/aboutus">About Us</Link>
             <a href='https://github.com/ogp-summit-hackathon-sommet-pgo/Stats-In-A-Can' target='_blank'>Github</a>
+
         </div>
     )
 }
