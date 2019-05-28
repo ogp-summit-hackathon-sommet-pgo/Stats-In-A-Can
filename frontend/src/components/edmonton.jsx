@@ -17,7 +17,8 @@ import {
 } from 'recharts'
 import WorldMap from './world-map.jsx'
 import canStyles from './can.css'
-import {ottawa_freq}from '../data/result.js'
+import {edm_req} from '../data/result.js'
+
 const Channel = () => {
     const name = 'Stats In A Can'
     const text = 'Public Transportation Analysis'
@@ -194,7 +195,7 @@ const Channel = () => {
             'Weekday': 4416,
         },
     ]
-    const city = 'Ottawa'
+    const city = 'Edmonton'
     return (
         <main className={styles.main}>
 
@@ -242,7 +243,7 @@ const Channel = () => {
                             elitr
                             eirmod vim, omnes fabellas no mei.
                         </div>
-                        <LineChart width={650} height={300} data={ottawa_freq}
+                        <LineChart width={650} height={300} data={edm_req}
                                    margin={{top: 5, right: 30, left: 20, bottom: 5}}>
                             <CartesianGrid strokeDasharray="3 3"/>
                             <XAxis dataKey="name"/>

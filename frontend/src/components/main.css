@@ -19,6 +19,21 @@
     box-shadow: 10px 10px 1px 0px #81D0D3, 20px 20px 1px 0px #BE8FA2;
 }
 
+.aboutUsPageContainer {
+    background: var(--container-white-background);
+    /*padding: 1rem;*/
+    padding: 5rem 2rem;
+    margin: 4rem 4rem 4rem 6cm;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 70rem;
+    min-width: 80%;
+    border-radius: 35px;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    box-shadow: 10px 10px 1px 0px #81D0D3, 20px 20px 1px 0px #BE8FA2;
+}
+
 .pageHeader {
     font-size: 18px;
 }
@@ -38,6 +53,13 @@
     flex-direction: column;
 }
 
+.aboutUsBigContainer {
+    display: flex;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 .summaryRow {
     display: flex;
     align-items: stretch;
@@ -252,8 +274,8 @@ hr {
 }
 
 .canLayout {
-    width: 30rem;
-    height: 45rem;
+    width: 35rem;
+    height: 50rem;
     /*background: red;*/
     background: linear-gradient(0deg, #FFC0CB 90%, transparent 10%);
     /*border-top-left-radius: 10px;*/
@@ -261,22 +283,22 @@ hr {
 }
 
 .canTop {
-    width: 30rem;
+    width: 35rem;
     height: 10rem;
     background: silver;
     border-radius: 50%;
-    margin-top: -46rem;
+    margin-top: -50rem;
     /*transform: translate(-50rem, 2rem);*/
 }
 
 .canButt {
-    width: 30rem;
+    width: 35rem;
     height: 10rem;
     background: #FFC0CB;
     border-radius: 50%;
     /*transform: translate(-100rem, 67rem);*/
     border-bottom: 10px solid silver;
-    margin-top: 31rem;
+    margin-top: 35rem;
 }
 
 .canTitle {
@@ -330,9 +352,30 @@ hr {
     justify-content: center;
 }
 
+.radiaChartMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5rem;
+}
 .canBodyBack {
     display: flex;
     flex-direction: column;
     margin-left: 5rem;
     align-self: flex-end;
+}
+
+.aboutUsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.teammateName {
+    font-size: 2rem;
+}
+
+.setWidth {
+    min-width: 95%;
+    margin: 6rem 5rem;
 }

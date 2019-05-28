@@ -17,24 +17,25 @@ class ZoomPan extends Component {
         this.state = {
             center: [-106.3468, 56.1304],
             zoom: 3,
-            cities: [
-                {name: 'Vancouver', coordinates: [-123.1207, 49.2827]},
-                {name: 'Ottawa', coordinates: [-75.6972, 45.4215]},
-                {name: 'Toronto', coordinates: [-79.3832, 43.6532]},
-                {name: 'Calgary', coordinates: [-114.0708, 51.0486]},
-                {name: 'Montreal', coordinates: [-73.5673, 45.5017]},
-                {name: 'Winnipeg', coordinates: [-97.1384, 49.8951]},
-            ],
+            // cities: [
+            //     {name: 'Vancouver', coordinates: [-123.1207, 49.2827]},
+            //     {name: 'Ottawa', coordinates: [-75.6972, 45.4215]},
+            //     {name: 'Toronto', coordinates: [-79.3832, 43.6532]},
+            //     {name: 'Calgary', coordinates: [-114.0708, 51.0486]},
+            //     {name: 'Montreal', coordinates: [-73.5673, 45.5017]},
+            //     {name: 'Winnipeg', coordinates: [-97.1384, 49.8951]},
+            // ],
             marker: [
                 // { markerOffset: -35, name: "Buenos Aires", coordinates: [-58.3816, -34.6037] },
                 // { markerOffset: -35, name: "La Paz", coordinates: [-68.1193, -16.4897] },
                 // { markerOffset: 15, name: "Brasilia", coordinates: [-47.8825, -15.7942] },
-                {markerOffset: 36, name: 'Vancouver', coordinates: [-123.1207, 49.2827]},
+                // {markerOffset: 36, name: 'Vancouver', coordinates: [-123.1207, 49.2827]},
                 {markerOffset: -35, name: 'Ottawa', coordinates: [-75.6972, 45.4215]},
-                {markerOffset: -35, name: 'Toronto', coordinates: [-79.3832, 43.6532]},
-                {markerOffset: -35, name: 'Calgary', coordinates: [-114.0708, 51.0486]},
-                {markerOffset: -35, name: 'Montreal', coordinates: [-73.5673, 45.5017]},
-                {markerOffset: -35, name: 'Winnipeg', coordinates: [-97.1384, 49.8951]},
+                {markerOffset: -35, name: 'Edmonton', coordinates: [-113.4909, 53.5444]},
+                // {markerOffset: -35, name: 'Toronto', coordinates: [-79.3832, 43.6532]},
+                {markerOffset: 15, name: 'Calgary', coordinates: [-114.0708, 51.0486]},
+                // {markerOffset: -35, name: 'Montreal', coordinates: [-73.5673, 45.5017]},
+                // {markerOffset: -35, name: 'Winnipeg', coordinates: [-97.1384, 49.8951]},
             ]
         }
         this.handleCitySelection = this.handleCitySelection.bind(this)
@@ -43,7 +44,7 @@ class ZoomPan extends Component {
 
     handleCitySelection(evt) {
         const cityId = evt.target.getAttribute('data-city')
-        const city = this.state.cities[cityId]
+        const city = this.state.marker[cityId]
         this.setState({
             center: city.coordinates,
             zoom: 7,
@@ -66,7 +67,7 @@ class ZoomPan extends Component {
                 <div>
                     <ButtonGroup vertical size="lg">
                     {
-                        this.state.cities.map((city, i) => (
+                        this.state.marker.map((city, i) => (
                             <Button
                                 key={i}
                                 data-city={i}
