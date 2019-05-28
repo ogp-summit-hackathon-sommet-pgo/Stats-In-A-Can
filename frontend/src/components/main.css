@@ -373,6 +373,9 @@ hr {
 
 .teammateName {
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'Bowlby One SC', cursive;
 }
 
 .setWidth {
