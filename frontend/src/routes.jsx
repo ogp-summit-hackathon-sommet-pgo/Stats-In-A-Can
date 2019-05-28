@@ -6,6 +6,7 @@ import Can from './components/can.jsx'
 import Ottawa from './components/ottawa.jsx'
 import Calgary from './components/calgary.jsx'
 import Edmonton from './components/edmonton.jsx'
+import Overall from './components/overall.jsx'
 import AboutUs from './components/aboutUs.jsx'
 import styles from './components/main.css'
 
@@ -18,6 +19,7 @@ const MainMenu = () => {
             <hr className={styles.divider}/>
             <Link to="/">Home</Link>
             <Link to="/can">Template</Link>
+            <Link to="/overall">Overall Analysis</Link>
             <p className={styles.sidenavText}>Analysis By Cities</p>
             <ul className={styles.sidenavUl}>
                 <li><Link to="/ottawa">Ottawa</Link></li>
@@ -45,6 +47,7 @@ export default function () {
                     <Route exact path="/ottawa" component={Ottawa}/>
                     <Route exact path="/edmonton" component={Edmonton}/>
                     <Route exact path="/calgary" component={Calgary}/>
+                    <Route exact path="/overall" component={Overall}/>
                     <Route exact path="/aboutus" component={AboutUs}/>
                     {/*<Route exact path="/reports" component={Reports}/>*/}
                 </Switch>

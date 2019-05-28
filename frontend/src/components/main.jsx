@@ -42,18 +42,6 @@ const Main = () => {
                         <div>
                             <GeoMap/>
                         </div>
-                        <div className={styles.radiaChartMain}>
-                            <RadialBarChart width={600} height={400} cx={200} cy={200} innerRadius={40} outerRadius={200} barSize={15} data={avg_req}>
-                                <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise dataKey="avg" />
-                                <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" wrapperStyle={wrapperStyleRadia} />
-                            </RadialBarChart>
-                            <div className={styles.notes}>notes about the chart above</div>
-                            <div className={styles.canCommentary}>Lorem ipsum dolor sit amet, at modo lorem rationibus eum.
-                                Eos
-                                at evertitur urbanitas, ex mea platonem adipiscing referrentur. Cu nec porro facilis, an
-
-                            </div>
-                        </div>
 
                     </div>
                 </div>

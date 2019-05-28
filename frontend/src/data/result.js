@@ -255,27 +255,67 @@ export const edm_req = [{'name': '04', 'Saturday': 13, 'Sunday': 8, 'Weekday': 2
 
 export const avg_req = [
     {
-        'name': 'Ottawa', 'avg': '15.65', fill: '#8884d8'
+        'name': 'Ottawa', 'avg': '15.65', fill: '#8884d8',
     },
     {
-        'name': 'Toronto', 'avg': '13.52', fill: '#83a6ed'
+        'name': 'Toronto', 'avg': '13.52', fill: '#83a6ed',
     },
     {
-        'name': 'Montreal', 'avg': '13.03', fill: '#8dd1e1'
+        'name': 'Montreal', 'avg': '13.03', fill: '#8dd1e1',
     },
     {
-        'name': 'Quebec', 'avg': '15.77', fill: '#82ca9d'
+        'name': 'Quebec', 'avg': '15.77', fill: '#82ca9d',
     },
     {
-        'name': 'Edmonton', 'avg': '20.03', fill: '#a4de6c'
+        'name': 'Edmonton', 'avg': '20.03', fill: '#a4de6c',
     },
     {
-        'name': 'Calgary', 'avg': '28.32', fill: '#d0ed57'
+        'name': 'Calgary', 'avg': '28.32', fill: '#d0ed57',
     },
     {
-        'name': 'Gatineau', 'avg': '2.95', fill: '#ffc658'
+        'name': 'Gatineau', 'avg': '2.95', fill: '#ffc658',
     },
     {
-        'name': 'Winnipeg', 'avg': '20.52', fill: '#ff703b'
+        'name': 'Winnipeg', 'avg': '20.52', fill: '#ff703b',
     },
 ]
+
+export const wheelchair_data =
+    [
+        {name: 'Toronto', with_wheelchair: 130591, without_wheelchair: 4577, amt: 2400},
+        {name: 'Montreal', with_wheelchair: 79627, without_wheelchair: 56440, amt: 2210},
+        {name: 'Quebec', with_wheelchair: 11899, without_wheelchair: 25170, amt: 2290},
+        {name: 'Gatineau', with_wheelchair: 5199, without_wheelchair: 16910, amt: 2000},
+        {name: 'Winnipeg', with_wheelchair: 11855, without_wheelchair: 0, amt: 2181},
+    ]
+
+export const bus_fare =
+    [
+        {
+            'name': 'Ottawa', 'Regular': '3.5', 'Elderly':'2.65', 'Children': '1.8',
+        },
+        {
+            'name': 'Vancouver', 'Regular': '2.95', 'Elderly':'1.9', 'Children': '1.9',
+        },
+        {
+            'name': 'Toronto', 'Regular': '3.25', 'Elderly':'2.2', 'Children': '2.2',
+        },
+        {
+            'name': 'Montreal', 'Regular': '3.25', 'Elderly':'2.25', 'Children': '2.25',
+        },
+        {
+            'name': 'Quebec', 'Regular': '3.05', 'Elderly':'2.55', 'Children': '2.55',
+        },
+        {
+            'name': 'Edmonton', 'Regular': '3.25', 'Elderly':'3.25', 'Children': '2.75',
+        },
+        {
+            'name': 'Calgary', 'Regular': '3.4', 'Elderly':'3.4', 'Children': '2.35',
+        },
+        {
+            'name': 'Gatineau', 'Regular': '4', 'Elderly':'2.6', 'Children': '2.6',
+        },
+        {
+            'name': 'Winnipeg', 'Regular': '2.95', 'Elderly':'2.45', 'Children': '2.45',
+        },
+    ]
