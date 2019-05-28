@@ -21,14 +21,23 @@ const Main = () => {
             <HeadBar name={name} text={text}/>
 
             <div className={styles.mainContainer}>
-                <div className={styles.title}>Title</div>
+                <div className={styles.title}>Introduction</div>
+                <div className={styles.notes}>
+                    We aim to look into public transportation dataset in Canada and discover correlationship with economic, and environmental dimension of communities. By leveraging our collected dataset, we are able to provide deeper insight to Ottawa in order to provide much safer and more convenient accessibility to public transportation
+                </div>
+                <div className={styles.title}>Objective</div>
                 <div>
                     <div className={styles.mainPageContainer}>
                         <span className={styles.pageHeader}></span>
                         <div className={styles.notes}>
-                            Hello World
+                            generate new insight from public transportation data in 9 selected Canadian countries
+                            generate transportation, economic, and environmental indicators to find the correlationship based on several factors
+                            Give an overall grading to each city based on their performance in three main sectors
+                            provide deep analysis to Ottawa City
                         </div>
                         <br/>
+
+
                         <span className={styles.pageDescription}>
                             <br/>
                         </span>

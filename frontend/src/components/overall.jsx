@@ -74,12 +74,25 @@ const Main = () => {
             <HeadBar name={name} text={text}/>
 
             <div className={styles.mainContainer}>
-                <div className={styles.title}>Title</div>
+                <div className={styles.title}>Overall Analysis</div>
                 <div>
                     <div className={styles.mainPageContainer}>
-                        <span className={styles.pageHeader}></span>
+                        <span className={styles.pageHeader}>Challenges</span>
                         <div className={styles.notes}>
-                            Hello World
+                            Seek for several public dataset. <br/>
+                            Transportation data in same format and has all the features we need like departure time of the bus in different route, bus fare, bus_frequency on different dates separated in weekdays and weekends. <br/>Transportation safety data (accident rate, total of collisions) <br/>Economy and environmental data
+                            look into cities in the US and Canada, the dataset is in different scale and different format hard to compare
+                            <br/>Collect census data in Ottawa identify workplace and residential area
+                            deep into transportation data, same stop come up with different stop name and slightly different longitude and latitude. <br/>
+                            Hard to aggregate
+                        </div>
+                        <div className={styles.title}>Findings</div>
+                        <div className={styles.notes}>
+                            • Overall transportation performance shows a regional pattern: East Coast has better performance that cities in Middle and West Coast.<br/>
+                            • Frequency is proportional to city size.<br/>
+                            Findings in case:<br/>
+                            • Transit fare in Vancouver is above its economical level<br/>
+                            • Transit fare in Ottawa is below its economical level<br/>
                         </div>
                         <br/>
                         <span className={styles.pageDescription}>
@@ -100,12 +113,9 @@ const Main = () => {
                                 <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle"
                                         wrapperStyle={wrapperStyleRadia}/>
                             </RadialBarChart>
-                            <div className={styles.notes}>notes about the chart above</div>
-                            <div className={styles.canCommentary}>Lorem ipsum dolor sit amet, at modo lorem rationibus
-                                eum.
-                                Eos
-                                at evertitur urbanitas, ex mea platonem adipiscing referrentur. Cu nec porro facilis, an
-
+                            <div className={styles.notes}>Average stop frequencies in Canadian cities</div>
+                            <div className={styles.canCommentary}>
+                                Gatineau has shortest wait time while Calgary has longest wait time.
                             </div>
                         </div>
                         <div className={styles.radiaChartMain}>
@@ -119,21 +129,22 @@ const Main = () => {
                                 <Bar dataKey="with_wheelchair" stackId="a" fill="#66a1ff" />
                                 <Bar dataKey="without_wheelchair" stackId="a" fill="#2d394c" />
                             </BarChart>
-                            <div className={styles.notes}>notes about the chart above</div>
-                            <div className={styles.canCommentary}>Lorem ipsum dolor sit amet, at modo lorem rationibus
-                                eum.
-                                Eos
-                                at evertitur urbanitas, ex mea platonem adipiscing referrentur. Cu nec porro facilis, an
+                            <div className={styles.notes}>Wheelchair accessibility across Canada</div>
+                            <div className={styles.canCommentary}> Toronto provides the best accessibility.
                             </div>
                         </div>
                         <div className={styles.radiaChartMain}>
                             <SimpleLineChart/>
-                            <div className={styles.notes}>notes about the chart above</div>
-                            <div className={styles.canCommentary}>Lorem ipsum dolor sit amet, at modo lorem rationibus
-                                eum.
-                                Eos
-                                at evertitur urbanitas, ex mea platonem adipiscing referrentur. Cu nec porro facilis, an
+                            <div className={styles.notes}>Bus fare across Canada</div>
+                            <div className={styles.canCommentary}>
+                                Gatineau has highest bus fare while bus fare in Vancouver and Winnipeg are the most affordable.
                             </div>
+                        </div>
+                        <div className={styles.title}>Work in the future</div>
+                        <div className={styles.notes}>
+                            - combine railway dataset <br/>
+                            - identify population aggregated within a city (residential and workplace)<br/>
+                            - based on collected public transportation dataset and accidents dataset, predict the type of accident happen in Ottawa<br/>
                         </div>
                     </div>
                 </div>

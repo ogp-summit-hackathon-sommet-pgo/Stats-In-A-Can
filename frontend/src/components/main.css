@@ -379,3 +379,8 @@ hr {
     min-width: 95%;
     margin: 6rem 5rem;
 }
+
+.donuts {
+    display: flex;
+    flex-direction: column;
+}

@@ -209,7 +209,7 @@ const Channel = () => {
                         <div className={styles.canButt}></div>
                         <div className={styles.canText}>
                             <span className={styles.canTitle}>{city}</span><br/>
-                            <span className={styles.canRating}>95</span><br/>
+                            <span className={styles.canRating}>52.0 / 100</span><br/>
                             <span className={styles.canContent}>Text</span><br/>
                             <span>Text</span><br/>
                             <span>Text</span><br/>
@@ -264,17 +264,6 @@ const Channel = () => {
                         <div className={styles.canLabel}>
                             <div className={styles.tableRight}>
                                 <Table borderless responsive className={styles.gameName}>
-                                    {/*<thead>*/}
-                                    {/*<tr>*/}
-                                    {/*    <th>#</th>*/}
-                                    {/*    <th>Game</th>*/}
-                                    {/*    <th>Stream Count</th>*/}
-                                    {/*    <th>Genre</th>*/}
-                                    {/*</tr>*/}
-                                    {/*</thead>*/}
-                                    {/*<tbody>*/}
-                                    {/*/!*{tr}*!/*/}
-                                    {/*</tbody>*/}
                                     <thead className={canStyles.labelHeader}>
                                     <span>C</span>
                                     <span>i</span>
@@ -298,15 +287,15 @@ const Channel = () => {
                                     </tr>
                                     <tr className={canStyles.labelTr}>
                                         <th className={canStyles.labelTh}>Safety</th>
-                                        <td className={canStyles.labelRating}>95</td>
+                                        <td className={canStyles.labelRating}>71.8</td>
                                     </tr>
                                     <tr className={canStyles.labelTr}>
                                         <th className={canStyles.labelTh}>Environment</th>
-                                        <td className={canStyles.labelRating}>95</td>
+                                        <td className={canStyles.labelRating}>20</td>
                                     </tr>
                                     <tr className={canStyles.labelTr}>
                                         <th className={canStyles.labelTh}>Economy</th>
-                                        <td className={canStyles.labelRating}>95</td>
+                                        <td className={canStyles.labelRating}>84.7</td>
                                     </tr>
                                     </tbody>
                                 </Table>

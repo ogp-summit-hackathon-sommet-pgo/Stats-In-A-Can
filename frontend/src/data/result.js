@@ -319,3 +319,95 @@ export const bus_fare =
             'name': 'Winnipeg', 'Regular': '2.95', 'Elderly':'2.45', 'Children': '2.45',
         },
     ]
+export const ottawa_pass_dist = [
+    {
+        type: 'Regular Pass',
+        percent: '24',
+    },
+    {
+        type: 'Express Pass',
+        percent: '7.8',
+    },
+    {
+        type: 'Student Regular Pass',
+        percent: '9.7',
+    },
+    {
+        type: 'Student Express Pass',
+        percent: '0.2',
+    },
+    {
+        type: 'Senior Pass',
+        percent: '3.9',
+    },
+    {
+        type: 'Community Pass',
+        percent: '3.2',
+    },
+    {
+        type: 'U-Pass',
+        percent: '26.4',
+    },
+    {
+        type: 'DayPass',
+        percent: '1.6',
+    },
+    {
+        type: 'Cash (includes O-Train tickets)',
+        percent: '3.5',
+    },
+    {
+        type: 'Tickets/e-Purse',
+        percent: '17.3',
+    },
+    {
+        type: 'Other',
+        percent: '2.3',
+    },
+]
+export const ottawa_pass_rev = [
+    {
+        type: 'Regular Pass',
+        percent: '24.1',
+    },
+    {
+        type: 'Express Pass',
+        percent: '10.9',
+    },
+    {
+        type: 'Student Regular Pass',
+        percent: '7',
+    },
+    {
+        type: 'Student Express Pass',
+        percent: '0.2',
+    },
+    {
+        type: 'Senior Pass',
+        percent: '1.9',
+    },
+    {
+        type: 'Community Pass',
+        percent: '4.8',
+    },
+    {
+        type: 'U-Pass',
+        percent: '17.1',
+    },
+    {
+        type: 'DayPass',
+        percent: '1.0',
+    },
+    {
+        type: 'Cash (includes O-Train tickets)',
+        percent: '6.2',
+    },
+    {
+        type: 'Tickets/e-Purse',
+        percent: '25.5',
+    },
+    {
+        type: 'Other',
+        percent: '2.3',
+    },
+]

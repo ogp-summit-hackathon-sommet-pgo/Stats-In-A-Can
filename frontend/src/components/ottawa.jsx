@@ -15,10 +15,13 @@ import {
     Area, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, RadarChart,
     Bar, BarChart,
 } from 'recharts'
+import randomColor from 'randomcolor'
+import {Doughnut} from 'react-chartjs-2'
 import WorldMap from './world-map.jsx'
 import canStyles from './can.css'
-import {ottawa_freq}from '../data/result.js'
-const Channel = () => {
+import {ottawa_freq, ottawa_pass_dist, ottawa_pass_rev} from '../data/result.js'
+
+const Ottawa = () => {
     const name = 'Stats In A Can'
     const text = 'Public Transportation Analysis'
 
@@ -60,141 +63,37 @@ const Channel = () => {
             'fullMark': 150,
         },
     ]
-    const data_line = [
-        {
-            'name': '03',
-            'Saturday': 79,
-            'Sunday': 171,
-            'Weekday': 65,
-        },
-        {
-            'name': '04',
-            'Saturday': 321,
-            'Sunday': 555,
-            'Weekday': 1251,
-        },
-        {
-            'name': '05',
-            'Saturday': 1960,
-            'Sunday': 1395,
-            'Weekday': 6234,
-        },
-        {
-            'name': '06',
-            'Saturday': 4601,
-            'Sunday': 5499,
-            'Weekday': 20279,
-        },
-        {
-            'name': '07',
-            'Saturday': 8425,
-            'Sunday': 13308,
-            'Weekday': 29221,
-        },
-        {
-            'name': '08',
-            'Saturday': 10312,
-            'Sunday': 18808,
-            'Weekday': 29544,
-        },
-        {
-            'name': '09',
-            'Saturday': 11752,
-            'Sunday': 25681,
-            'Weekday': 19467,
-        },
-        {
-            'name': '10',
-            'Saturday': 13277,
-            'Sunday': 31285,
-            'Weekday': 17144,
-        },
-        {
-            'name': '11',
-            'Saturday': 14095,
-            'Sunday': 34146,
-            'Weekday': 16810,
-        },
-        {
-            'name': '12',
-            'Saturday': 14434,
-            'Sunday': 36095,
-            'Weekday': 16868,
-        },
-        {
-            'name': '13',
-            'Saturday': 14652,
-            'Sunday': 36945,
-            'Weekday': 17024,
-        },
-        {
-            'name': '14',
-            'Saturday': 15377,
-            'Sunday': 37935,
-            'Weekday': 18509,
-        },
-        {
-            'name': '15',
-            'Saturday': 15139,
-            'Sunday': 37711,
-            'Weekday': 26567,
-        },
-        {
-            'name': '16',
-            'Saturday': 14754,
-            'Sunday': 37501,
-            'Weekday': 29067,
-        },
-        {
-            'name': '17',
-            'Saturday': 14509,
-            'Sunday': 36466,
-            'Weekday': 28696,
-        },
-        {
-            'name': '18',
-            'Saturday': 13330,
-            'Sunday': 30781,
-            'Weekday': 22554,
-        },
-        {
-            'name': '19',
-            'Saturday': 11672,
-            'Sunday': 24706,
-            'Weekday': 15275,
-        },
-        {
-            'name': '20',
-            'Saturday': 10470,
-            'Sunday': 22585,
-            'Weekday': 13678,
-        },
-        {
-            'name': '21',
-            'Saturday': 9416,
-            'Sunday': 20590,
-            'Weekday': 13081,
-        },
-        {
-            'name': '22',
-            'Saturday': 8578,
-            'Sunday': 18190,
-            'Weekday': 10956,
-        },
-        {
-            'name': '23',
-            'Saturday': 7662,
-            'Sunday': 13776,
-            'Weekday': 8557,
-        },
-        {
-            'name': '24',
-            'Saturday': 5064,
-            'Sunday': 5385,
-            'Weekday': 4416,
-        },
-    ]
     const city = 'Ottawa'
+
+    let label = [], data_ = [], rev_data_ = []
+    let bgColor = [], hoverBgColor = []
+    for (let col of ottawa_pass_dist) {
+        label.push(col.type)
+        data_.push(col.percent)
+        bgColor.push(randomColor())
+        hoverBgColor.push(randomColor())
+    }
+
+    for (let col of ottawa_pass_rev) {
+        rev_data_.push(col.percent)
+    }
+    const dataCollection = {
+        labels: label,
+        datasets: [{
+            data: data_,
+            backgroundColor: bgColor,
+            hoverBackgroundColor: hoverBgColor,
+        }],
+    }
+
+    const rev_dataCollection = {
+        labels: label,
+        datasets: [{
+            data: rev_data_,
+            backgroundColor: bgColor,
+            hoverBackgroundColor: hoverBgColor,
+        }],
+    }
     return (
         <main className={styles.main}>
 
@@ -208,39 +107,22 @@ const Channel = () => {
                         <div className={styles.canButt}></div>
                         <div className={styles.canText}>
                             <span className={styles.canTitle}>{city}</span><br/>
-                            <span className={styles.canRating}>95</span><br/>
-                            <span className={styles.canContent}>Text</span><br/>
-                            <span>Text</span><br/>
-                            <span>Text</span><br/>
-                            <span>Text</span><br/>
-                            <span>Text</span><br/>
+                            <span className={styles.canRating}>64.2 / 100</span><br/>
+                            {/*<span className={styles.canContent}>Text</span><br/>*/}
                         </div>
                         {/*<div className={styles.canRating}>95</div>*/}
                     </div>
                     <div className={styles.chartAndText}>
-                        <RadarChart outerRadius={120} width={500} height={300} data={data}>
-                            <PolarGrid/>
-                            <PolarAngleAxis dataKey="subject"/>
-                            <PolarRadiusAxis angle={30} domain={[0, 150]}/>
-                            <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>
-                            <Radar name="Lily" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6}/>
-                            <Legend/>
-                        </RadarChart>
-                        <div className={styles.notes}>notes about the chart above</div>
-                        <div className={styles.canCommentary}>Lorem ipsum dolor sit amet, at modo lorem rationibus eum.
-                            Eos
-                            at evertitur urbanitas, ex mea platonem adipiscing referrentur. Cu nec porro facilis, an
-                            quodsi
-                            splendide vis. Mea choro doming reprehendunt in, eos in aeterno iudicabit. Vim fuisset
-                            blandit
-                            interesset ex, nam cibo iisque conceptam in. His vitae evertitur ei, ut sit enim
-                            consectetuer.
-                            Pro no habeo feugiat voluptaria.
-
-                            Oratio perpetua at nam, has audiam commune repudiare ad, nec eu ornatus constituto. Nemore
-                            temporibus an vix, verear voluptaria disputando cu est. Est lorem neglegentur ne. Cu adhuc
-                            elitr
-                            eirmod vim, omnes fabellas no mei.
+                        {/*<RadarChart outerRadius={120} width={500} height={300} data={data}>*/}
+                        {/*    <PolarGrid/>*/}
+                        {/*    <PolarAngleAxis dataKey="subject"/>*/}
+                        {/*    <PolarRadiusAxis angle={30} domain={[0, 150]}/>*/}
+                        {/*    <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>*/}
+                        {/*    <Radar name="Lily" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6}/>*/}
+                        {/*    <Legend/>*/}
+                        {/*</RadarChart>*/}
+                        <div className={styles.notes}>Rush hour from 7-8 and 15-17</div>
+                        <div className={styles.canCommentary}> Higher bus frequency in Sunday
                         </div>
                         <LineChart width={650} height={300} data={ottawa_freq}
                                    margin={{top: 5, right: 30, left: 20, bottom: 5}}>
@@ -263,17 +145,6 @@ const Channel = () => {
                         <div className={styles.canLabel}>
                             <div className={styles.tableRight}>
                                 <Table borderless responsive className={styles.gameName}>
-                                    {/*<thead>*/}
-                                    {/*<tr>*/}
-                                    {/*    <th>#</th>*/}
-                                    {/*    <th>Game</th>*/}
-                                    {/*    <th>Stream Count</th>*/}
-                                    {/*    <th>Genre</th>*/}
-                                    {/*</tr>*/}
-                                    {/*</thead>*/}
-                                    {/*<tbody>*/}
-                                    {/*/!*{tr}*!/*/}
-                                    {/*</tbody>*/}
                                     <thead className={canStyles.labelHeader}>
                                     <span>C</span>
                                     <span>i</span>
@@ -297,15 +168,15 @@ const Channel = () => {
                                     </tr>
                                     <tr className={canStyles.labelTr}>
                                         <th className={canStyles.labelTh}>Safety</th>
-                                        <td className={canStyles.labelRating}>95</td>
+                                        <td className={canStyles.labelRating}>85.9</td>
                                     </tr>
                                     <tr className={canStyles.labelTr}>
                                         <th className={canStyles.labelTh}>Environment</th>
-                                        <td className={canStyles.labelRating}>95</td>
+                                        <td className={canStyles.labelRating}>60</td>
                                     </tr>
                                     <tr className={canStyles.labelTr}>
                                         <th className={canStyles.labelTh}>Economy</th>
-                                        <td className={canStyles.labelRating}>95</td>
+                                        <td className={canStyles.labelRating}>63.3</td>
                                     </tr>
                                     </tbody>
                                 </Table>
@@ -314,38 +185,33 @@ const Channel = () => {
                     </div>
                     {/*<div className={styles.canRating}>95</div>*/}
 
-                    <div className={styles.canCommentary}>Lorem ipsum dolor sit amet, at modo lorem rationibus eum. Eos
-                        at evertitur urbanitas, ex mea platonem adipiscing referrentur. Cu nec porro facilis, an quodsi
-                        splendide vis. Mea choro doming reprehendunt in, eos in aeterno iudicabit. Vim fuisset blandit
-                        interesset ex, nam cibo iisque conceptam in. His vitae evertitur ei, ut sit enim consectetuer.
-                        Pro no habeo feugiat voluptaria.
+                    <div className={styles.canCommentary}>Above average in Environment and Economy, and leading Safety rating across the country.
 
-                        Oratio perpetua at nam, has audiam commune repudiare ad, nec eu ornatus constituto. Nemore
-                        temporibus an vix, verear voluptaria disputando cu est. Est lorem neglegentur ne. Cu adhuc elitr
-                        eirmod vim, omnes fabellas no mei.
-
-                        Pertinax reprehendunt vel id, munere offendit per no. Ei usu veri copiosae tractatos. An cum
-                        commodo feugiat albucius, tota dicta nostrum cum in. Ea solum persecuti vituperata mei. Id
-                        verterem constituto eloquentiam nam, eam ex nisl possim, vim ex sonet noster voluptatum.
-                        Noluisse pertinacia ne quo.
-
-                        Ut nonumy disputando duo, nihil eruditi eu mel. Scripta adipisci mea te, quo regione
-                        reprehendunt te, est te diam nullam. Cu usu dico harum denique. Modus quaestio vix at, te veri
-                        discere labores sed, augue quando aperiam ad cum.
-
-                        Eos ei alterum platonem indoctum, dicant verterem argumentum nam no, sed no imperdiet
-                        quaerendum. Sit omittam erroribus at, in quo facer fuisset omittantur, et his suscipit
-                        adipiscing mediocritatem. Nemore legimus moderatius te vix. Feugiat erroribus adolescens id qui,
-                        latine diceret invenire eam te, odio fabulas vel at. Sit assueverit concludaturque ex, sit
-                        docendi mandamus reprehendunt id, id sed nibh malis. Dicit reprimique at vim, ad cum solet
-                        blandit intellegam.
                     </div>
                 </div>
-                <WorldMap />
+
+
+                <div>
+                    <div className={styles.donuts}>
+                        <Doughnut data={dataCollection} height={10} width={10}/>
+                        <Doughnut data={rev_dataCollection} height={10} width={10}/>
+                    </div>
+                    <div className={styles.notes}>
+                        Left - Ridership by fare category (%) <br/>
+                        Right - Passenger revenue by fare category (%) <br/>
+                        2016 Data
+                    </div>
+                </div>
+                <div className={styles.radiaChartMain}>
+
+                    <div className={styles.canCommentary}>
+                    </div>
+                </div>
+                <WorldMap/>
             </div>
 
         </main>
     )
 }
 
-export default Channel
+export default Ottawa
