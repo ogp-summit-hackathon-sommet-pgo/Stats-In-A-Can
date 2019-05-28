@@ -30,10 +30,10 @@ const Main = () => {
                     <div className={styles.mainPageContainer}>
                         <span className={styles.pageHeader}></span>
                         <div className={styles.notes}>
-                            generate new insight from public transportation data in 9 selected Canadian countries
-                            generate transportation, economic, and environmental indicators to find the correlationship based on several factors
-                            Give an overall grading to each city based on their performance in three main sectors
-                            provide deep analysis to Ottawa City
+                            • Generate new insight from public transportation data in 9 selected Canadian countries<br/>
+                            • Generate transportation, economic, and environmental indicators to find the correlationship based on several factors<br/>
+                            • Give an overall grading to each city based on their performance in three main sectors<br/>
+                            • Provide deep analysis to Ottawa City<br/>
                         </div>
                         <br/>
 

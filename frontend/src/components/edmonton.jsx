@@ -210,38 +210,25 @@ const Channel = () => {
                         <div className={styles.canText}>
                             <span className={styles.canTitle}>{city}</span><br/>
                             <span className={styles.canRating}>52.0 / 100</span><br/>
-                            <span className={styles.canContent}>Text</span><br/>
-                            <span>Text</span><br/>
-                            <span>Text</span><br/>
-                            <span>Text</span><br/>
-                            <span>Text</span><br/>
+                            {/*<span className={styles.canContent}>Text</span><br/>*/}
+                            {/*<span>Text</span><br/>*/}
+                            {/*<span>Text</span><br/>*/}
+                            {/*<span>Text</span><br/>*/}
+                            {/*<span>Text</span><br/>*/}
                         </div>
                         {/*<div className={styles.canRating}>95</div>*/}
                     </div>
                     <div className={styles.chartAndText}>
-                        <RadarChart outerRadius={120} width={500} height={300} data={data}>
-                            <PolarGrid/>
-                            <PolarAngleAxis dataKey="subject"/>
-                            <PolarRadiusAxis angle={30} domain={[0, 150]}/>
-                            <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>
-                            <Radar name="Lily" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6}/>
-                            <Legend/>
-                        </RadarChart>
+                        {/*<RadarChart outerRadius={120} width={500} height={300} data={data}>*/}
+                        {/*    <PolarGrid/>*/}
+                        {/*    <PolarAngleAxis dataKey="subject"/>*/}
+                        {/*    <PolarRadiusAxis angle={30} domain={[0, 150]}/>*/}
+                        {/*    <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>*/}
+                        {/*    <Radar name="Lily" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6}/>*/}
+                        {/*    <Legend/>*/}
+                        {/*</RadarChart>*/}
                         <div className={styles.notes}>notes about the chart above</div>
-                        <div className={styles.canCommentary}>Lorem ipsum dolor sit amet, at modo lorem rationibus eum.
-                            Eos
-                            at evertitur urbanitas, ex mea platonem adipiscing referrentur. Cu nec porro facilis, an
-                            quodsi
-                            splendide vis. Mea choro doming reprehendunt in, eos in aeterno iudicabit. Vim fuisset
-                            blandit
-                            interesset ex, nam cibo iisque conceptam in. His vitae evertitur ei, ut sit enim
-                            consectetuer.
-                            Pro no habeo feugiat voluptaria.
-
-                            Oratio perpetua at nam, has audiam commune repudiare ad, nec eu ornatus constituto. Nemore
-                            temporibus an vix, verear voluptaria disputando cu est. Est lorem neglegentur ne. Cu adhuc
-                            elitr
-                            eirmod vim, omnes fabellas no mei.
+                        <div className={styles.canCommentary}>
                         </div>
                         <LineChart width={650} height={300} data={edm_req}
                                    margin={{top: 5, right: 30, left: 20, bottom: 5}}>
@@ -304,31 +291,7 @@ const Channel = () => {
                     </div>
                     {/*<div className={styles.canRating}>95</div>*/}
 
-                    <div className={styles.canCommentary}>Lorem ipsum dolor sit amet, at modo lorem rationibus eum. Eos
-                        at evertitur urbanitas, ex mea platonem adipiscing referrentur. Cu nec porro facilis, an quodsi
-                        splendide vis. Mea choro doming reprehendunt in, eos in aeterno iudicabit. Vim fuisset blandit
-                        interesset ex, nam cibo iisque conceptam in. His vitae evertitur ei, ut sit enim consectetuer.
-                        Pro no habeo feugiat voluptaria.
-
-                        Oratio perpetua at nam, has audiam commune repudiare ad, nec eu ornatus constituto. Nemore
-                        temporibus an vix, verear voluptaria disputando cu est. Est lorem neglegentur ne. Cu adhuc elitr
-                        eirmod vim, omnes fabellas no mei.
-
-                        Pertinax reprehendunt vel id, munere offendit per no. Ei usu veri copiosae tractatos. An cum
-                        commodo feugiat albucius, tota dicta nostrum cum in. Ea solum persecuti vituperata mei. Id
-                        verterem constituto eloquentiam nam, eam ex nisl possim, vim ex sonet noster voluptatum.
-                        Noluisse pertinacia ne quo.
-
-                        Ut nonumy disputando duo, nihil eruditi eu mel. Scripta adipisci mea te, quo regione
-                        reprehendunt te, est te diam nullam. Cu usu dico harum denique. Modus quaestio vix at, te veri
-                        discere labores sed, augue quando aperiam ad cum.
-
-                        Eos ei alterum platonem indoctum, dicant verterem argumentum nam no, sed no imperdiet
-                        quaerendum. Sit omittam erroribus at, in quo facer fuisset omittantur, et his suscipit
-                        adipiscing mediocritatem. Nemore legimus moderatius te vix. Feugiat erroribus adolescens id qui,
-                        latine diceret invenire eam te, odio fabulas vel at. Sit assueverit concludaturque ex, sit
-                        docendi mandamus reprehendunt id, id sed nibh malis. Dicit reprimique at vim, ad cum solet
-                        blandit intellegam.
+                    <div className={styles.canCommentary}>
                     </div>
                 </div>
                 <WorldMap />
