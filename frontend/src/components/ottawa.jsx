@@ -17,7 +17,7 @@ import {
 } from 'recharts'
 import randomColor from 'randomcolor'
 import {Doughnut} from 'react-chartjs-2'
-import WorldMap from './world-map.jsx'
+// import WorldMap from './world-map.jsx'
 import canStyles from './can.css'
 import {ottawa_freq, ottawa_pass_dist, ottawa_pass_rev} from '../data/result.js'
 
@@ -207,7 +207,7 @@ const Ottawa = () => {
                     <div className={styles.canCommentary}>
                     </div>
                 </div>
-                <WorldMap/>
+                {/*<WorldMap/>*/}
             </div>
 
         </main>

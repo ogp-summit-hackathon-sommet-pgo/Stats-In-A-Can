@@ -15,7 +15,7 @@ import {
     Area, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, RadarChart,
     Bar, BarChart,
 } from 'recharts'
-import WorldMap from './world-map.jsx'
+// import WorldMap from './world-map.jsx'
 import canStyles from './can.css'
 import {calgary_req} from '../data/result.js'
 const Channel = () => {
@@ -158,7 +158,7 @@ const Channel = () => {
                     <div className={styles.canCommentary}> Great economic development while lacking in environment. High in green house gas emission.
                     </div>
                 </div>
-                <WorldMap />
+                {/*<WorldMap />*/}
             </div>
 
         </main>
