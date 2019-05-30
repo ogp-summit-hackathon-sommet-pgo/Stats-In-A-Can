@@ -80,9 +80,12 @@ const Main = () => {
                         <span className={styles.pageHeader}>Challenges</span>
                         <div className={styles.notes}>
                             • Seek for several public dataset. <br/>
-                            • Transportation data in same format and has all the features we need like departure time of the bus in different route, bus fare, bus_frequency on different dates separated in weekdays and weekends. <br/>Transportation safety data (accident rate, total of collisions) <br/>Economy and environmental data
-                            look into cities in the US and Canada, the dataset is in different scale and different format hard to compare
-                            <br/>• Collect census data in Ottawa identify workplace and residential area
+                            • Transportation data in same format and has all the features we need like departure time of the bus in different route, <br/>
+                            bus fare, bus_frequency on different dates separated in weekdays and weekends. <br/>
+                            Transportation safety data (accident rate, total of collisions) <br/>
+                            Economy and environmental data look into cities in the US and Canada, <br/>
+                            the dataset is in different scale and different format hard to compare
+                            <br/>• Collect census data in Ottawa identify workplace and residential area<br/>
                             deep into transportation data, same stop come up with different stop name and slightly different longitude and latitude. <br/>
                             Hard to aggregate
                         </div>

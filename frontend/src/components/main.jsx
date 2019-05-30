@@ -21,9 +21,16 @@ const Main = () => {
             <HeadBar name={name} text={text}/>
 
             <div className={styles.mainContainer}>
+                <div className={styles.notes}>
+                    The hackathon event has ended, but you are more than welcomed to contribute to this project.<br/>
+                    Note that this site provides minimal support for IE and Safari, the layout works best in current Firefox and Chrome.
+                </div>
                 <div className={styles.title}>Introduction</div>
                 <div className={styles.notes}>
-                    We aim to look into public transportation dataset in Canada and discover correlationship with economic, and environmental dimension of communities. By leveraging our collected dataset, we are able to provide deeper insight to Ottawa in order to provide much safer and more convenient accessibility to public transportation
+                    We aim to look into public transportation dataset in Canada and discover correlationship<br/>
+                    with economic, and environmental dimension of communities. <br/>
+                    By leveraging our collected dataset, we are able to provide deeper insight to Ottawa <br/>
+                    in order to provide much safer and more convenient accessibility to public transportation
                 </div>
                 <div className={styles.title}>Objective</div>
                 <div>
