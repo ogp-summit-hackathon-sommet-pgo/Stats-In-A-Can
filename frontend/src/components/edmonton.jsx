@@ -227,7 +227,7 @@ const Channel = () => {
                         {/*    <Radar name="Lily" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6}/>*/}
                         {/*    <Legend/>*/}
                         {/*</RadarChart>*/}
-                        <div className={styles.notes}>notes about the chart above</div>
+                        <div className={styles.notes}>Bus frequency peaks at 7 in the morning.</div>
                         <div className={styles.canCommentary}>
                         </div>
                         <LineChart width={650} height={300} data={edm_req}

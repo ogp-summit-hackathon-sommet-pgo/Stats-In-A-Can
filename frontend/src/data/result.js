@@ -183,12 +183,7 @@ export const calgary_req = [{'name': '04', 'Saturday': 331, 'Sunday': 331, 'Week
     'Saturday': 18842,
     'Sunday': 17232,
     'Weekday': 22872,
-}, {'name': '24', 'Saturday': 11295, 'Sunday': 8331, 'Weekday': 16974}, {
-    'name': '25',
-    'Saturday': 2318,
-    'Sunday': 1550,
-    'Weekday': 4339,
-}, {'name': '26', 'Saturday': 56, 'Sunday': 56, 'Weekday': 34}]
+}, {'name': '24', 'Saturday': 11295, 'Sunday': 8331, 'Weekday': 16974}]
 
 export const edm_req = [{'name': '04', 'Saturday': 13, 'Sunday': 8, 'Weekday': 257}, {
     'name': '05',
@@ -240,17 +235,7 @@ export const edm_req = [{'name': '04', 'Saturday': 13, 'Sunday': 8, 'Weekday': 2
     'Saturday': 6211,
     'Sunday': 5667,
     'Weekday': 6411,
-}, {'name': '24', 'Saturday': 5071, 'Sunday': 3224, 'Weekday': 4873}, {
-    'name': '25',
-    'Saturday': 2236,
-    'Sunday': 1692,
-    'Weekday': 2093,
-}, {'name': '26', 'Saturday': 1493, 'Sunday': 1504, 'Weekday': 1492}, {
-    'name': '27',
-    'Saturday': 767,
-    'Sunday': 761,
-    'Weekday': 734,
-}, {'name': '28', 'Saturday': 44, 'Sunday': 38, 'Weekday': 56}]
+}, {'name': '24', 'Saturday': 5071, 'Sunday': 3224, 'Weekday': 4873}]
 
 
 export const avg_req = [
