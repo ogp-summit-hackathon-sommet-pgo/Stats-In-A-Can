@@ -23,7 +23,7 @@
   "author": "harrisonxia",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "bootstrap": ">=4.1.2",
     "chart.js": "^2.7.3",
